@@ -5,6 +5,7 @@ default: &default
       username: 'postgres'
       password: '#krecik#'
       host:     <%= ENV['IP'] %>
+      template: 'template0'
 
 development:
   <<: *default
