@@ -1,0 +1,54 @@
+<!-- #MAIN PANEL -->
+<div id="main" role="main">
+	<%= render "layouts/ribbon" %>
+	<!-- #MAIN CONTENT -->
+	<div id="content" style="opacity: 1;">
+		<div class="row">
+			<!-- col -->
+			<div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
+				<h1 class="page-title txt-color-blueDark">
+					<!-- PAGE HEADER -->
+					<i class="fa-fw fa fa-home"></i> 
+						Lista projektów 
+					<span></span>
+				    <a href="javascript:void(0);" class="btn btn-info pull-right" role="button"><i class="fa fa-plus"></i> Nowy projekt</a>
+				</h1>
+				
+			</div>
+			<div class="col-sm-12">
+				<div class="well well-light">
+					<div class="row">
+						<% @projects.each do |project| %>
+						<div class="col-xs-12 col-sm-4 col-md-3 col-lg-2">
+				            <div class="panel panel-darken pricing-big">
+				                <div class="panel-heading">
+				                    <h3 class="panel-title"><%= project.name %></h3>
+				                </div>
+				                <div class="panel-body no-padding text-align-center">
+				                    <div class="the-price">
+				                        <h1>$999<span class="subscript">/ mo</span></h1>
+				                    </div>
+									<div class="price-features">
+										<ul class="list-unstyled text-left">
+								          <li><i class="fa fa-check text-success"></i> Cechy <strong> projektu</strong></li>
+								        </ul>
+									</div>
+				                </div>
+				                <div class="panel-footer text-align-center">
+				                    <a href="/projects/details/<%= project.id %>" class="btn btn-success btn-block" role="button"><i class="fa fa-check"></i> Otwórz</a>
+				                </div>
+				            </div>
+				        </div>
+				        <!-- end col -->
+						<% end %>
+						<!-- end col -->
+					</div>
+				</div>
+			</div>
+		</div>
+		<!-- end row -->
+	</div>
+	<!-- END #MAIN CONTENT -->
+	
+</div>
+<!-- END #MAIN PANEL -->
